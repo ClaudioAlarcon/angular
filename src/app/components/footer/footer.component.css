@@ -1,0 +1,14 @@
+.footer{
+    background-color: #212529;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;
+}
+
+.createdBy{
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+    color: white;
+}
