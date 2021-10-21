@@ -1,12 +1,19 @@
 <div class="genderize">
     <h1 class="tittle">Genderize</h1>
     <div class="container">
-        <div class="row justify-content-center inputName">
-            <input type="text" class="form-control" placeholder="Ingrese Un Nombre">
+        <div class="row inputName">
+            <div class="col-10 inputContainer">
+                <input type="text" class="form-control" placeholder="Ingrese Un Nombre" id="name">
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-primary" (click)="getEndpointData()">Cargar</button>
+            </div>
         </div>
         <div class="row resultContainer">
             <div class="col">
-                <h3>Gender</h3>
+                <div *ngIf="gender!==''">
+                    <img class="genderImage" [src]="url" alt="genderImage">
+                </div>
             </div>
             <div class="col">
                 <h3>Probability</h3>
@@ -14,6 +21,6 @@
             <div class="col">
                 <h3>Count</h3>
             </div>
-          </div>
+        </div>
     </div>
 </div>
