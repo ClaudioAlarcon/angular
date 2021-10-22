@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GenderizeComponent } from './components/exercises/genderize/genderize.component';
+import { DonutchartComponent } from './components/exercises/widgets/donutchart/donutchart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    GenderizeComponent
+    GenderizeComponent,
+    DonutchartComponent
   ],
   imports: [
     BrowserModule,

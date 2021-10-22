@@ -1,6 +1,7 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Genderize } from 'src/app/interfaces/genderize';
 import { EndpointService } from 'src/app/services/endpoint.service';
+import { DonutchartComponent } from '../widgets/donutchart/donutchart.component';
 
 @Component({
   selector: 'app-genderize',
@@ -8,7 +9,12 @@ import { EndpointService } from 'src/app/services/endpoint.service';
   styleUrls: ['./genderize.component.css']
 })
 export class GenderizeComponent implements OnInit {
-  public data: any;
+
+  @ViewChild(DonutchartComponent, { static: false }) childC!: DonutchartComponent;
+  showChild: boolean = true;
+
+  
+  public data!: Genderize;
   public gender: string;
   public url: string;
   public name: string;
@@ -24,13 +30,16 @@ export class GenderizeComponent implements OnInit {
   
   public getEndpointData(): void {
     this.name = (<HTMLInputElement>document.getElementById("name")).value;
-    this.data = GenderizeComponent;
     this.endpoint.getData('https://api.genderize.io/?name='+this.name).subscribe((res: Genderize) => {
     this.data = res;
     console.log(this.data);
     this.gender = res.gender;
     this.url = 'assets/genderize/'+this.gender+'.jpg';
+    this.onUpdateChild(this.data)
   });
+}
+onUpdateChild(data: Genderize) {
+  this.childC.drawChart(data);
 }
 
 }
