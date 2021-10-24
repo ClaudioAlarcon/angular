@@ -1,7 +1,16 @@
+.countContainer{
+    justify-content: center;
+}
+
+.countTittle{
+    font-size: 5vh;
+    font-weight: bold;
+    padding-top: 8vh;
+}
+
 .count {
   cursor: pointer;
-  margin: auto;
-  font-size: 5vmin;
+  font-size: 4vh;
   font-weight: 300;
   transition: font-weight 250ms ease-in-out;
 }
