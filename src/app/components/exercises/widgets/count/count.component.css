@@ -1,0 +1,11 @@
+.count {
+  cursor: pointer;
+  margin: auto;
+  font-size: 5vmin;
+  font-weight: 300;
+  transition: font-weight 250ms ease-in-out;
+}
+
+.count:hover {
+  font-weight: 900;
+}
