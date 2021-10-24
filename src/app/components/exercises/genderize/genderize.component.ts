@@ -18,6 +18,7 @@ export class GenderizeComponent implements OnInit {
   public gender: string;
   public url: string;
   public name: string;
+  public count!: number;
 
   constructor(public endpoint: EndpointService) { 
     this.gender = '';
@@ -32,6 +33,7 @@ export class GenderizeComponent implements OnInit {
     this.name = (<HTMLInputElement>document.getElementById("name")).value;
     this.endpoint.getData('https://api.genderize.io/?name='+this.name).subscribe((res: Genderize) => {
     this.data = res;
+    this.count = res.count;
     console.log(this.data);
     this.gender = res.gender;
     this.url = 'assets/genderize/'+this.gender+'.jpg';

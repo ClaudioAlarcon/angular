@@ -21,7 +21,9 @@
                 <app-donutchart [data]=data></app-donutchart>
             </div>
             <div class="col">
-                <app-count></app-count>
+                <div *ngIf="count">
+                    <app-count [count]=count></app-count>
+                </div>
             </div>
         </div>
     </div>
