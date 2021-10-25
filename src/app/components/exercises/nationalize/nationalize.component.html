@@ -13,18 +13,13 @@
         <input type="text" class="form-control" placeholder="Write a name" id="name2">
         <button type="button" class="btn btn-primary" (click)="getEndpointData()">Go!</button>
     </div>
-    <!-- this article will show an image depending of name's probability gender -->
+    <!-- this article will show a charts with the endpoint results -->
     <article class="col">
-        <div>
+        <div class="chartNationalize">
             <app-donutchart [data]=dataNationalize></app-donutchart>
         </div>
     </article>
-    <!-- tis article will show a donut chart with the probabilities of names gender -->
-    <article class="col">
-        <div>
-        </div>
-    </article>
-    <!-- this article will show the consults were made for probabilities -->
+    <!-- tis article will show the flags of results -->
     <article class="col">
         <div>
         </div>

@@ -21,6 +21,13 @@ a{
     justify-content: center;
 }
 
+.chartNationalize{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10vh;
+}
+
 .tittleText {
     width: 6.2em;
     animation: typing 2s steps(11), blink 0.5s step-end infinite alternate;
