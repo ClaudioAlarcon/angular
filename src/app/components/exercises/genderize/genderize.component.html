@@ -2,23 +2,23 @@
         <div class="div tittle">
             <h2 class="col-12 display-4 text-capitalize tittleText">Genderize</h2>
         </div>
-        
+        <!-- This section constains the Genderize's input and results -->
         <section class="row" id="boxes">
             <div class="div input">
                 <input type="text" class="form-control" placeholder="Write a name" id="name">
                 <button type="button" class="btn btn-primary" (click)="getEndpointData()">Go!</button>
             </div>
-            
+            <!-- this article will show an image depending of name's probability gender -->
             <article class="col">
                 <div *ngIf="gender!==''">
-                    <img class="genderImage" [src]="url" alt="genderImage">
+                    <img class="genderImage" [src]="urlImage" alt="genderImage">
                 </div>
             </article>
-
+            <!-- tis article will show a donut chart with the probabilities of names gender -->
             <article class="col">
                 <app-donutchart [data]=data></app-donutchart>
             </article>
-
+            <!-- this article will show the consults were made for probabilities -->
             <article class="col">
                 <div *ngIf="count">
                     <app-count [count]=count></app-count>

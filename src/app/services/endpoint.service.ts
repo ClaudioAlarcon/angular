@@ -9,6 +9,11 @@ export class EndpointService {
 
   constructor(private http: HttpClient) { }
 
+  /**
+  * This function is used to get the data from the endpoint
+  * @param url endpoint url
+  * @returns response from the endpoint
+  */
   public getData(url: string): Observable<any> {
     return this.http.get(url);
   }

@@ -6,6 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./count.component.css']
 })
 export class CountComponent{
+  
+  // Data coming from the parent component
   @Input() count!: number;
   
   constructor() { }
