@@ -5,10 +5,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { GenderizeComponent } from './components/exercises/genderize/genderize.component';
 
 const routes: Routes = [
-  {
-    path: 'genderize',
-    component: GenderizeComponent
-  }
 ];
 
 @NgModule({
