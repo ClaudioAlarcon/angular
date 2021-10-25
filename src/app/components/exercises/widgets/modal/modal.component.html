@@ -1,15 +1,13 @@
-<button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="helper" [src]="urlIcon"/></button>
-  
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="{{modalTexts[0]}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog">
     <div class="modal-content">
     <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">What is Genderize?</h5>
+        <h5 class="modal-title" id="exampleModalLabel">{{modalTexts[1]}}</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
-        <p>Genderize is an angular proyect that calculates the gender probability of a name, showing an image depending of major gender probability, a chart and a count</p>
+        <p>{{modalTexts[2]}}</p>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Oh, Ok!</button>

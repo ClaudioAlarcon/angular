@@ -1,19 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { DonutData } from 'src/app/interfaces/donut-data';
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css']
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent{
+  @Input() modalTexts!: string[];
 
-  public urlIcon: string;
+ 
+  public modalTarget!: string;
 
   constructor() {
-    this.urlIcon = 'assets/help.png';
+    if (this.modalTexts) {
+      this.modalTarget = '#genderizeModel';
+    }
+    
    }
-
-  ngOnInit(): void {
-  }
-
 }

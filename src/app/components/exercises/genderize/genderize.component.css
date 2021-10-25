@@ -6,15 +6,21 @@
     border-radius: 50%;
 }
 
-.helper{
-    padding-top: 10vh;
+a{
+    margin-top: 10vh;
+    width: 15vh;
+    height: 15vh;
+}
+.helperIcon{
+    height: 15vh;
+    width: 15vh;
 }
 
 .tittle{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 10vh;
+    padding-top: 1vh;
 }
 
 .input{

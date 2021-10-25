@@ -1,1 +1,33 @@
-<p>nationalize works!</p>
+<div id="Genderize">
+    <div class="helper">
+        <a class="btn" data-bs-toggle="modal" data-bs-target="#nationalizeModel">
+            <img [src]="urlIcon" alt="helper" class="helperIcon">
+        </a>
+        <app-modal [modalTexts]='nationalizeModalTexts'></app-modal>
+    </div>
+    <div class="div tittle">
+        <h2 class="col-12 display-4 text-capitalize tittleText">Nationalize</h2>
+    </div>
+<section class="row" id="charts">
+    <div class="div input">
+        <input type="text" class="form-control" placeholder="Write a name" id="name2">
+        <button type="button" class="btn btn-primary" (click)="getEndpointData()">Go!</button>
+    </div>
+    <!-- this article will show an image depending of name's probability gender -->
+    <article class="col">
+        <div>
+            <app-donutchart [data]=dataNationalize></app-donutchart>
+        </div>
+    </article>
+    <!-- tis article will show a donut chart with the probabilities of names gender -->
+    <article class="col">
+        <div>
+        </div>
+    </article>
+    <!-- this article will show the consults were made for probabilities -->
+    <article class="col">
+        <div>
+        </div>
+    </article>
+</section>
+</div>

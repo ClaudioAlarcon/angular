@@ -1,6 +1,9 @@
 <div id="Genderize">
     <div class="helper">
-        <app-modal></app-modal>
+        <a class="btn" data-bs-toggle="modal" data-bs-target="#genderizeModel">
+            <img [src]="urlIcon" alt="helper" class="helperIcon">
+        </a>
+        <app-modal [modalTexts]='genderizeModalTexts'></app-modal>
     </div>
     <div class="div tittle">
         <h2 class="col-12 display-4 text-capitalize tittleText">Genderize</h2>

@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Chart } from 'chart.js';
 import { DonutData } from 'src/app/interfaces/donut-data';
 import { Genderize } from 'src/app/interfaces/genderize';
 import { EndpointService } from 'src/app/services/endpoint.service';
@@ -12,23 +13,31 @@ import { DonutchartComponent } from '../widgets/donutchart/donutchart.component'
 export class GenderizeComponent implements OnInit {
 
   @ViewChild(DonutchartComponent, { static: false }) childC!: DonutchartComponent;
-  showChild: boolean = true;
 
-  
   public data!: DonutData;
   public gender: string;
   public urlEndpoint: string;
   public urlImage: string;
   public name: string;
   public count!: number;
+  public chart1!: Chart;
+  public genderizeModalTexts: string[];
+  public urlIcon: string;
 
   constructor(public endpoint: EndpointService) {
     this.urlEndpoint = 'https://api.genderize.io/?name=';
     this.gender = '';
     this.urlImage = '';
     this.name= '';
+    this.urlIcon = 'assets/help.png';
+    this.genderizeModalTexts = [
+      'genderizeModel',
+      'What is Genderize?',
+      'Genderize is an angular proyect that calculates the gender probability of a name, showing an image depending of major gender probability, a chart and a count'
+    ]
     // Donut Chart's Config
     this.data= {
+      type: 'genderizeChart',
       backgroundColor:['rgb(54, 162, 235)', 'rgb(255, 99, 132)'],
       labels:['Male', 'Female'],
       symbol: '%',

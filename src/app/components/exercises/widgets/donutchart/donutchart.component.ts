@@ -26,7 +26,7 @@ export class DonutchartComponent{
     if (this.myChart) {
       this.myChart.destroy();
   }
-    this.myChart = new Chart("myChart", {
+    this.myChart = new Chart(this.data.type, {
       type: 'doughnut',
       data: {
           labels: this.data.labels,
