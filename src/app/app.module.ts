@@ -10,6 +10,7 @@ import { DonutchartComponent } from './components/exercises/widgets/donutchart/d
 import { CountComponent } from './components/exercises/widgets/count/count.component';
 import { ContentComponent } from './components/content/content.component';
 import { ModalComponent } from './components/exercises/widgets/modal/modal.component';
+import { NationalizeComponent } from './components/exercises/nationalize/nationalize.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ModalComponent } from './components/exercises/widgets/modal/modal.compo
     DonutchartComponent,
     CountComponent,
     ContentComponent,
-    ModalComponent
+    ModalComponent,
+    NationalizeComponent
   ],
   imports: [
     BrowserModule,

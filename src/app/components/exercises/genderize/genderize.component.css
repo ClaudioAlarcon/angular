@@ -6,11 +6,15 @@
     border-radius: 50%;
 }
 
+.helper{
+    padding-top: 10vh;
+}
+
 .tittle{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 20vh;
+    padding-top: 10vh;
 }
 
 .input{
@@ -19,7 +23,6 @@
     justify-content: center;
 }
 
-  
 .tittleText {
     width: 5em;
     animation: typing 2s steps(9), blink 0.5s step-end infinite alternate;
