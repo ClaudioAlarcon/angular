@@ -1,6 +1,7 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
-import { Genderize } from 'src/app/interfaces/genderize';
+import { DonutData } from 'src/app/interfaces/donut-data';
+
 Chart.register(...registerables);
 
 @Component({
@@ -9,29 +10,30 @@ Chart.register(...registerables);
   styleUrls: ['./donutchart.component.css']
 })
 export class DonutchartComponent{
+  
   public myChart!: Chart;
-  @Input() data!: Genderize;
-  public dataChart: number[];
+  public symbol!: string;
+  @Input() data!: DonutData;
 
   constructor(){
-    this.dataChart = [];
   }
 
-  public drawChart(datas: Genderize): void {
-    
-    this.getGenderProbability(datas);
+  /**
+  * This function is called when the component is initialized drawing the chart with endpoint data.
+  * @param data The data to be used to draw the chart.
+  */
+  public drawChart(data: DonutData): void {
     if (this.myChart) {
       this.myChart.destroy();
   }
     this.myChart = new Chart("myChart", {
       type: 'doughnut',
       data: {
-          labels: ['Male', 'Female'],
+          labels: this.data.labels,
           datasets: [{
               label: 'Expenditures',
-              data: this.dataChart,
-              backgroundColor: [
-                'rgb(54, 162, 235)', 'rgb(255, 99, 132)'],
+              data: this.data.data,
+              backgroundColor: this.data.backgroundColor,
               hoverOffset: 4,
           }]
       },
@@ -47,22 +49,12 @@ export class DonutchartComponent{
                         };
                     },
                     label: function(datas) {
-                        return datas.dataset.data[datas.dataIndex] + '%';
+                        return data.data[datas.dataIndex] + data.symbol;
                     }
                 }
             }
         }
     }
   });
-  }
-
-  public getGenderProbability(data: Genderize) {
-    this.dataChart = [];
-    let probability = data.probability;
-    if (data.gender === 'male') {
-      this.dataChart.push(probability*100, 100-(probability*100));
-    } else {
-      this.dataChart.push(100-(probability*100), probability*100);
-    }
   }
 }
