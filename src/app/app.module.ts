@@ -9,6 +9,7 @@ import { GenderizeComponent } from './components/exercises/genderize/genderize.c
 import { DonutchartComponent } from './components/exercises/widgets/donutchart/donutchart.component';
 import { CountComponent } from './components/exercises/widgets/count/count.component';
 import { ContentComponent } from './components/content/content.component';
+import { ModalComponent } from './components/exercises/widgets/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContentComponent } from './components/content/content.component';
     GenderizeComponent,
     DonutchartComponent,
     CountComponent,
-    ContentComponent
+    ContentComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
