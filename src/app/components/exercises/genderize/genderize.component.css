@@ -1,25 +1,8 @@
-.genderize{
-    width: 100%;
-    height: 90vh;
-    background-color: aqua;
-}
-
-.tittle{
-    text-align: center;
-    padding-top: 5vh;
-}
-
-.inputName, .resultContainer{
-    padding-top: 5vh;
-}
-
-.form-control{
-    width: 100%;
-}
-
 .genderImage{
+    z-index: -1;
+    overflow: hidden;
     opacity: 0.9;
-    width: 30vh;
+    width: 25vh;
     border-radius: 50%;
 }
 
@@ -27,26 +10,42 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+    padding-top: 20vh;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
   
-  .tittleText {
-    width: 9ch;
+.tittleText {
+    width: 5em;
     animation: typing 2s steps(9), blink 0.5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
     font-family: monospace;
-    font-size: 4rem;
-  }
+    font-size: 3em;
+}
   
-  @keyframes typing {
+@keyframes typing {
     from {
       width: 0;
     }
-  }
+}
       
-  @keyframes blink {
+@keyframes blink {
     50% {
       border-color: transparent
     }
-  }
+}
+
+article{
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10vh;
+}	

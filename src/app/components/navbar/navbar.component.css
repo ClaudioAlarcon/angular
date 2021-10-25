@@ -1,5 +1,9 @@
 .navbar{
-    height: 10vh;
+    z-index: 1;
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    overflow: hidden !important;
 }
 
 .nav-item{

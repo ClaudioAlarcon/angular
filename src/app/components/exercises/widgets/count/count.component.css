@@ -1,11 +1,6 @@
-.countContainer{
-    justify-content: center;
-}
-
 .countTittle{
     font-size: 5vh;
     font-weight: bold;
-    padding-top: 8vh;
 }
 
 .count {

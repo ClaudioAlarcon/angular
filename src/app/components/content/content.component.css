@@ -1,0 +1,7 @@
+.container {
+    height: 20px !important;
+    display: grid;
+    justify-content: center;
+        min-height:100%;
+   
+}
