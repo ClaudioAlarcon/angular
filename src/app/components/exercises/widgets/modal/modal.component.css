@@ -1,0 +1,11 @@
+.helper{
+    height: 10vh;
+    width: 10vh;
+}
+.modal-content{
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+    width: 70%;
+}
