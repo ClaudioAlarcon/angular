@@ -11,6 +11,7 @@ import { CountComponent } from './components/exercises/widgets/count/count.compo
 import { ContentComponent } from './components/content/content.component';
 import { ModalComponent } from './components/exercises/widgets/modal/modal.component';
 import { NationalizeComponent } from './components/exercises/nationalize/nationalize.component';
+import { TableComponent } from './components/exercises/widgets/table/table.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NationalizeComponent } from './components/exercises/nationalize/nationa
     CountComponent,
     ContentComponent,
     ModalComponent,
-    NationalizeComponent
+    NationalizeComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,

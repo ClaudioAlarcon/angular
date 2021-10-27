@@ -1,4 +1,4 @@
-<div id="Genderize">
+<div id="Nationalize">
     <div class="helper">
         <a class="btn" data-bs-toggle="modal" data-bs-target="#nationalizeModel">
             <img [src]="urlIcon" alt="helper" class="helperIcon">
@@ -13,15 +13,16 @@
         <input type="text" class="form-control" placeholder="Write a name" id="name2">
         <button type="button" class="btn btn-primary" (click)="getEndpointData()">Go!</button>
     </div>
-    <!-- this article will show a charts with the endpoint results -->
+    <!-- this article show a charts with the endpoint results -->
     <article class="col">
         <div class="chartNationalize">
             <app-donutchart [data]=dataNationalize></app-donutchart>
         </div>
     </article>
-    <!-- tis article will show the flags of results -->
-    <article class="col">
-        <div>
+    <!-- tis article show a table with results -->
+    <article class="col nationalizeTable">
+        <div *ngIf="showTable">
+            <app-table [tableData]=dataTable></app-table>
         </div>
     </article>
 </section>

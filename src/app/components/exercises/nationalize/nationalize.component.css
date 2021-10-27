@@ -21,6 +21,10 @@ a{
     justify-content: center;
 }
 
+.nationalizeTable{
+    padding-top: 15vh;
+}
+
 .chartNationalize{
     display: flex;
     align-items: center;

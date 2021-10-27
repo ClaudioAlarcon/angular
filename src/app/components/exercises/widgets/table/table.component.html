@@ -1,0 +1,17 @@
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col" *ngFor="let header of tableData.headers">
+       {{header}}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let country of tableData.rows index as ind">
+      <th scope="row">{{ind+1}}</th>
+      <th><img src={{country.flag}}></th>
+      <td>{{country.id}}</td>
+      <td>{{country.probability}}</td>
+    </tr>
+  </tbody>
+</table> 

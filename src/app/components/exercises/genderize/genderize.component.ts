@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Chart } from 'chart.js';
 import { DonutData } from 'src/app/interfaces/donut-data';
 import { Genderize } from 'src/app/interfaces/genderize';
@@ -25,11 +25,13 @@ export class GenderizeComponent implements OnInit {
   public urlIcon: string;
 
   constructor(public endpoint: EndpointService) {
+    // Genderize endpoint
     this.urlEndpoint = 'https://api.genderize.io/?name=';
     this.gender = '';
     this.urlImage = '';
     this.name= '';
     this.urlIcon = 'assets/help.png';
+    // Here are the modal texts
     this.genderizeModalTexts = [
       'genderizeModel',
       'What is Genderize?',
