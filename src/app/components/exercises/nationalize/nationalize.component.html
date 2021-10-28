@@ -15,13 +15,12 @@
     </div>
     <!-- this article will show an image depending of name's probability gender -->
     <article class="col chart">
-        <div>
-            <app-donutchart [data]=dataNationalize></app-donutchart>
-        </div>
+        <app-donutchart [data]=dataNationalize></app-donutchart>
     </article>
     <!-- tis article will show a table with endpoint results -->
-    <article class="col">
-        <div>
+    <article class="col table">
+        <div *ngIf="showTable">
+            <app-table [tableDatas]="tableDatas" [tableHeaders]="tableHeaders"></app-table>
         </div>
     </article>
 </section>

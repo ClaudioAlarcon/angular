@@ -24,7 +24,7 @@ import { TableComponent } from './components/exercises/widgets/table/table.compo
     ContentComponent,
     ModalComponent,
     NationalizeComponent,
-    TableComponent
+    TableComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,16 @@
-<p>table works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col" *ngFor = "let header of tableHeaders">{{header}}</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let data of tableDatas index as ind">
+          <th>{{ ind+1 }}</th>
+          <td>{{ data.name }}</td>
+          <td><img class="flag" src="{{ data.flag }}"></td>
+          <td>{{ data.code }}</td>
+          <td>{{ data.probability }}%</td>
+        </tr>
+    </tbody>
+  </table>
