@@ -30,6 +30,7 @@ export class GenderizeComponent implements OnInit {
     this.urlImage = '';
     this.name= '';
     this.urlIcon = 'assets/help.png';
+    // Modal texts
     this.genderizeModalTexts = [
       'genderizeModel',
       'What is Genderize?',

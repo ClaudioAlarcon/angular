@@ -18,9 +18,11 @@ export class NationalizeComponent implements OnInit {
   public urlIcon: string;
 
   constructor(public endpoint: EndpointService) {
+    // End point url
     this.urlEndpoint = 'https://api.nationalize.io/?name=';
     this.name= '';
     this.urlIcon = 'assets/help.png';
+    // Modal texts
     this.nationalizeModalTexts = [
       'nationalizeModel',
       'What is Nationalize?',
@@ -28,7 +30,7 @@ export class NationalizeComponent implements OnInit {
     // Donut Chart's Config
     this.dataNationalize= {
       type: 'chartNationalize',
-      backgroundColor:['rgb(54, 162, 235)', 'rgb(255, 99, 132)', 'rgb(255, 99, 132)'],
+      backgroundColor:['rgb(54, 162, 235)', 'rgb(255, 99, 132)', 'rgb(251, 255, 0)'],
       labels:[],
       symbol: '%',
       // Don't set any data
@@ -38,6 +40,9 @@ export class NationalizeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+  * This function is called when the user clicks on the button to get the endpoint data
+  */
   public getEndpointData(): void {
     this.name = (<HTMLInputElement>document.getElementById("name2")).value;
     this.endpoint.getData(this.urlEndpoint+this.name).subscribe((res: Nationalize) => {
@@ -46,6 +51,11 @@ export class NationalizeComponent implements OnInit {
     this.onUpdateChild(this.dataNationalize)
   });
 }
+
+  /**
+  * This function calculates the nationalize probability
+  * @param endpointData This is the endpoint data from the API
+  */
   public getNationalizeProbability(endpointData: Nationalize){
     let nations: string[] = [];
     let probabilities: number[] = [];
@@ -58,6 +68,10 @@ export class NationalizeComponent implements OnInit {
     this.dataNationalize.data = probabilities;
   }
 
+  /**
+  * This function sends the data to the child component
+  * @param data data prepared for the child component
+  */
   public onUpdateChild(data: DonutData) {
     this.childC.drawChart(data);
   }
