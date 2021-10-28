@@ -34,7 +34,7 @@ export class GenderizeComponent implements OnInit {
     this.genderizeModalTexts = [
       'genderizeModel',
       'What is Genderize?',
-      'Genderize is an angular proyect that calculates the gender probability of a name, showing an image depending of major gender probability, a chart and a count'
+      'Genderize is an angular proyect that predict the gender of a person based on their name.'
     ]
     // Donut Chart's Config
     this.data= {

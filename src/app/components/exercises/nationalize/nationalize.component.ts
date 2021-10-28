@@ -35,7 +35,7 @@ export class NationalizeComponent implements OnInit {
     this.nationalizeModalTexts = [
       'nationalizeModel',
       'What is Nationalize?',
-      'Genderize is an angular proyect that calculates the gender probability of a name, showing an image depending of major gender probability, a chart and a count'];
+      'Nationalize is an angular proyect that predict the nationality of a person based on their name.'];
     // Donut Chart's Config
     this.dataNationalize= {
       type: 'chartNationalize',
