@@ -95,7 +95,7 @@ export class NationalizeComponent implements OnInit {
     let probabilities: number[] = [];
     endpointData.country.forEach(element => {
       nations.push(element.country_id);
-      probabilities.push(element.probability*100);
+      probabilities.push(Math.trunc(element.probability*100));
     }); {
     }
     this.dataNationalize.labels = nations;

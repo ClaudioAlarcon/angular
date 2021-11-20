@@ -69,11 +69,12 @@ export class GenderizeComponent implements OnInit {
   */
   public getGenderProbability(endpointData: Genderize){
     let dataChart: number[] = [];
-    let probability = endpointData.probability;
+    let probability = Math.trunc(endpointData.probability*100);
+    console.log(probability);
     if (endpointData.gender === 'male') {
-      dataChart.push(probability*100, 100-(probability*100));
+      dataChart.push(probability, 100-probability);
     } else {
-      dataChart.push(100-(probability*100), probability*100);
+      dataChart.push(100-probability, probability);
     }
     this.data.data = dataChart;
   }
